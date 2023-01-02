@@ -7,7 +7,7 @@ const [getData, setGetData] = useState([]);
 
 const getapi = async()=>{
     await axios 
-    .get("https://reqres.in/api/users?page=2")
+    .get("https://reqres.in/api/users?per_page=12")
     .then(function(res){
        setGetData(res.data.data)
        console.log(res.data.data)
@@ -52,12 +52,12 @@ justify-content: center;
 
 .card {
   /* Add shadows to create the "card" effect */
- min-width:260px;
-  flex-basis:100px;
+ width:260px;
+  /* flex-basis:100px; */
   height: 400px;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   transition: 0.3s;
-  margin: 5px 6px;
+  margin:20px;
 }
 
 /* On mouse-over, add a deeper shadow */
